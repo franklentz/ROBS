@@ -1,4 +1,4 @@
-#' Changes the Scene of the current program
+#' ask for a list of the items
 #'
 #' @description
 #'
@@ -18,21 +18,17 @@
 #' myobs <- createOBSWebsocket()
 #' connectToOBS(obs = myobs)
 #' identifyToOBS(obs = myobs, eventSub = "33", password = "OBSwebsocketServerPassword")
-#' SetCurrentProgramScene(obs = myobs, scene = "Muti Cam Scene")
-#' SetCurrentProgramScene(obs = myobs, scene = "BRB")
+#' GetSceneItemList(obs = myobs, scene = "BRB")
 #' disconnectFromOBS(myobs)
-
-SetCurrentProgramScene <- function(obs = obs, scene = "main", requestId = uuid::UUIDgenerate(), verbose = TRUE ){
+GetSceneItemList <- function(obs = obs, scene = "main", verbose = TRUE, requestId = uuid::UUIDgenerate() ){
 
   requestData = paste0("{
     \"sceneName\": \"", scene ,"\"
   }")
+  verbose = verbose
+  opCode6(obs = obs, requestType = "GetSceneItemList", requestId = requestId, requestData, verbose)
 
-  opCode6(obs = obs,
-          requestType = "SetCurrentProgramScene",
-          requestId = requestId,
-          requestData,
-          verbose = verbose)
+  logThis(obs, requestId, "0", "GetSceneItemList", paste("Client asked to get the Items of", scene))
 
-  logThis(obs, requestId, "0", "SetCurrentProgramScene", paste("Client asked to change scene to", scene))
 }
+

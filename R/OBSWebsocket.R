@@ -35,7 +35,12 @@ OBSWebSocket <- R6::R6Class(
   public = list(
     obsWebSocketVersion = "Unknown",
     challenge = NULL,
-    salt = NULL
+    salt = NULL,
+    outlog = data.frame("requestID" = NULL,
+                         "requestStatus" = NULL,
+                         "requestType" = NULL,
+                         "requestComment" = NULL,
+                         "responseData" = NULL)
   ),
   private = list(
 
@@ -146,4 +151,5 @@ disconnectFromOBS <- function(obs = obs){
   obs$close()
 
 }
+
 
