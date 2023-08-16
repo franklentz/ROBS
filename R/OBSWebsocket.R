@@ -32,7 +32,7 @@
 
 OBSWebSocket <- R6::R6Class(
   "OBSWebSocket",
-  inherit = WebSocket,
+  inherit = websocket::WebSocket,
   lock_class = TRUE,
   public = list(
     obsWebSocketVersion = "Unknown",
