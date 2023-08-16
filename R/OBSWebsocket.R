@@ -11,7 +11,7 @@
 
 #' @author FML
 #'
-#' @return A formatted outline of the course
+#' @import websocket
 #' @export
 #'
 #' @examples

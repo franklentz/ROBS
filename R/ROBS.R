@@ -8,5 +8,5 @@
 #' @importFrom jsonlite fromJSON
 #' @importFrom openssl sha256
 #' @importFrom R6 R6Class
-#' @importFrom uuiid UUIDgenerate
+#' @importFrom uuid UUIDgenerate
 "_PACKAGE"

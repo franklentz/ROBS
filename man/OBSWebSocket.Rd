@@ -3,9 +3,6 @@
 \name{OBSWebSocket}
 \alias{OBSWebSocket}
 \title{Create an OBS Websocket Client}
-\value{
-A formatted outline of the course
-}
 \description{
 Create a websocket client to connect to OBS and send commands.
 The WebSocket server (Use "Tools" menu in OBS) must be activated.

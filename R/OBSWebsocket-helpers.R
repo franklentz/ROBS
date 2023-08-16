@@ -1,9 +1,9 @@
 # ---------------------- Helpers --------------------------
 
 
-
 # ------------------- Create handlers ---------------------
 
+#' @importFrom jsonlite fromJSON toJSON
 
 createHandlers <- function(obs){
 
