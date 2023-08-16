@@ -2,7 +2,7 @@
 % Please edit documentation in R/OBSWebsocket.R
 \name{OBSWebSocket}
 \alias{OBSWebSocket}
-\title{Create an OBS Websocket Client}
+\title{R OBS Websocket Class}
 \description{
 Create a websocket client to connect to OBS and send commands.
 The WebSocket server (Use "Tools" menu in OBS) must be activated.
