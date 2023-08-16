@@ -29,9 +29,17 @@ OBSWebSocket <- R6::R6Class(
   inherit = websocket::WebSocket,
   lock_class = TRUE,
   public = list(
+
+    #' @field  obsWebSocketVersion Used to store the OBS websocket version of the server
     obsWebSocketVersion = "Unknown",
+
+    #' @field  challenge Used to store the challenge sent by the OBS websocket during the connection and used for the identification
     challenge = NULL,
+
+    #' @field  salt Used to store the salt sent by the OBS websocket during the connection and used for the identification
     salt = NULL,
+
+    #' @field  outlog Used to store the requests and responses to and from the OBS websocket server
     outlog = data.frame("requestID" = NULL,
                          "requestStatus" = NULL,
                          "requestType" = NULL,

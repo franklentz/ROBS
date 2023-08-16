@@ -20,6 +20,19 @@ FML
 \section{Super class}{
 \code{\link[websocket:WebSocket]{websocket::WebSocket}} -> \code{OBSWebSocket}
 }
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
+\describe{
+\item{\code{obsWebSocketVersion}}{Used to store the OBS websocket version of the server}
+
+\item{\code{challenge}}{Used to store the challenge sent by the OBS websocket during the connection and used for the identification}
+
+\item{\code{salt}}{Used to store the salt sent by the OBS websocket during the connection and used for the identification}
+
+\item{\code{outlog}}{Used to store the requests and responses to and from the OBS websocket server}
+}
+\if{html}{\out{</div>}}
+}
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
