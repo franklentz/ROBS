@@ -1,6 +1,6 @@
 Package: ROBS
 Type: Package
-Title: What the Package Does (Title Case)
+Title: R client for obs-websocket
 Version: 0.1.0
 Author: FML
 Maintainer: FML <yourself@somewhere.net>
@@ -19,3 +19,4 @@ Imports:
     jsonlite,
     openssl,
     websocket
+RoxygenNote: 7.2.3
