@@ -55,7 +55,7 @@ identifyToOBS <- function(obs=obs, password, eventSub="33"){
     # Generate an SHA256 binary hash of the result and base64 encode it, known as a base64 secret.
 
     base64Secret <- sha256(charToRaw(passwordAndSalt))
-    base64Secret <- jsonlite::base64_encode(base64Secret)
+    base64Secret <- base64_encode(base64Secret)
 
     # Concatenate the base64 secret with the challenge sent by the server (base64Secret + challenge)
 
