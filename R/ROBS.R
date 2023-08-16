@@ -4,8 +4,7 @@
 #' `browseVignettes(package = "ROBS")`
 #' @keywords internal
 #' @import websocket
-#' @importFrom base64 base64_encode
-#' @importFrom jsonlite fromJSON
+#' @importFrom jsonlite fromJSON toJSON base64_encode
 #' @importFrom openssl sha256
 #' @importFrom R6 R6Class
 #' @importFrom uuid UUIDgenerate
