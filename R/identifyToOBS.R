@@ -10,6 +10,8 @@
 #' @param password the password of the OBS websocket server if authentication has been activated (strongly advisable)
 #' @param eventSub Default 33
 #' @author FML
+#' @importFrom openssl base64_encode
+#' @importFrom openssl sha256
 #' @export
 #' @examples
 #'
@@ -63,7 +65,7 @@ identifyToOBS <- function(obs=obs, password, eventSub="33"){
 
     # Generate a binary SHA256 hash of that result and base64 encode it.
 
-    authenticationString <- jsonlite::base64_encode(sha256(charToRaw(base64SecretAndChallenge)))
+    authenticationString <- base64_encode(sha256(charToRaw(base64SecretAndChallenge)))
 
 
     # Create Message
