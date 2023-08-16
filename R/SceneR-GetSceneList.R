@@ -2,7 +2,7 @@
 #'
 #' @description
 #'
-#' Changes the Scene of the current program using an existing connection to OBS.
+#' Get the list of the scenes in OBS using an existing connection to OBS.
 
 #'
 #' @param obs an obs websocket with an active connection. Default obs

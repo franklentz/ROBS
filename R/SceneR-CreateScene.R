@@ -4,7 +4,7 @@
 #'
 #' Create a new scene in the current collection in OBS.
 #'
-#' @param scene The name of the scene to switch to create
+#' @param sceneName The name of the scene to switch to create
 #'
 #' @author FML
 #'
@@ -15,15 +15,15 @@
 #' myobs <- createOBSWebsocket()
 #' connectToOBS(obs = myobs)
 #' identifyToOBS(obs = myobs, eventSub = "33", password = "OBSwebsocketServerPassword")
-#' CreateScene(obs = myobs, scene = "New Scene")
+#' CreateScene(obs = myobs, sceneName = "New Scene")
 #' disconnectFromOBS(myobs)
 
-CreateScene <- function(obs = obs, scene = "New", requestId = uuid::UUIDgenerate(), verbose = TRUE ){
+CreateScene <- function(obs = obs, sceneName = "New", requestId = uuid::UUIDgenerate(), verbose = TRUE ){
 
   # Create the request data
 
   requestData = paste0("{
-    \"sceneName\": \"", scene ,"\"
+    \"sceneName\": \"", sceneName ,"\"
   }")
 
   # Send an opCode6
@@ -36,14 +36,7 @@ CreateScene <- function(obs = obs, scene = "New", requestId = uuid::UUIDgenerate
 
   # Log the request
 
-  # obs$outlog <- rbind(obs$outlog, data.frame("requestId" = requestId,
-  #                                            "requestStatus" = 0,
-  #                                            "requestType" = "CreateScene",
-  #                                            "requestComment" = paste("Client asked to create", scene)
-  #                                            )
-  #                     )
-
-  logThis(obs, requestId, "0", "CreateScene", paste("Client asked to create", scene))
+  logThis(obs, requestId, "0", "CreateScene", paste("Client asked to create", sceneName))
 
   return(requestId)
 

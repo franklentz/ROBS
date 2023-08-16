@@ -1,8 +1,8 @@
-#' Changes the Scene of the current program
+#' Changes the Scene of the current preview
 #'
 #' @description
 #'
-#' Changes the Scene of the current program using an existing connection to OBS.
+#' Changes the Scene of the current preview using an existing connection to OBS.
 
 #'
 #' @param obs an obs websocket with an active connection. Default obs
@@ -18,21 +18,21 @@
 #' myobs <- createOBSWebsocket()
 #' connectToOBS(obs = myobs)
 #' identifyToOBS(obs = myobs, eventSub = "33", password = "OBSwebsocketServerPassword")
-#' SetCurrentProgramScene(obs = myobs, scene = "Muti Cam Scene")
-#' SetCurrentProgramScene(obs = myobs, scene = "BRB")
+#' SetCurrentPreviewScene(obs = myobs, sceneName = "Muti Cam Scene")
+#' SetCurrentPreviewScene(obs = myobs, sceneName = "BRB")
 #' disconnectFromOBS(myobs)
 
-SetCurrentProgramScene <- function(obs = obs, sceneName = "main", requestId = uuid::UUIDgenerate(), verbose = TRUE ){
+SetCurrentPreviewScene <- function(obs = obs, sceneName = "main", requestId = uuid::UUIDgenerate(), verbose = TRUE ){
 
   requestData = paste0("{
     \"sceneName\": \"", sceneName ,"\"
   }")
 
   opCode6(obs = obs,
-          requestType = "SetCurrentProgramScene",
+          requestType = "SetCurrentPreviewScene",
           requestId = requestId,
           requestData,
           verbose = verbose)
 
-  logThis(obs, requestId, "0", "SetCurrentProgramScene", paste("Client asked to change scene to", sceneName))
+  logThis(obs, requestId, "0", "SetCurrentPreviewScene", paste("Client asked to change preview scene to", sceneName))
 }
