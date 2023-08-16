@@ -21,7 +21,7 @@
 #' SetSceneSceneTransitionOverride(obs = myobs, scene = "Muti Cam Scene", transitionName = "a name", transitionDuration = 500)
 #' disconnectFromOBS(myobs)
 
-SetSceneSceneTransitionOverride <- function(obs = obs,
+SetSceneTransitionOverride <- function(obs = obs,
                                             sceneName,
                                             transitionName,
                                             transitionDuration = 300,
