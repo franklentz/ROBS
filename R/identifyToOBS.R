@@ -56,8 +56,8 @@ identifyToOBS <- function(obs=obs, password, eventSub="33"){
 
     # Generate an SHA256 binary hash of the result and base64 encode it, known as a base64 secret.
 
-    base64Secret <- sha256(charToRaw(passwordAndSalt))
-    base64Secret <- base64_encode(base64Secret)
+    base64Secret <- openssl::sha256(charToRaw(passwordAndSalt))
+    base64Secret <- openssl::base64_encode(base64Secret)
 
     # Concatenate the base64 secret with the challenge sent by the server (base64Secret + challenge)
 
@@ -65,7 +65,7 @@ identifyToOBS <- function(obs=obs, password, eventSub="33"){
 
     # Generate a binary SHA256 hash of that result and base64 encode it.
 
-    authenticationString <- base64_encode(sha256(charToRaw(base64SecretAndChallenge)))
+    authenticationString <- openssl::base64_encode(openssl::sha256(charToRaw(base64SecretAndChallenge)))
 
 
     # Create Message
