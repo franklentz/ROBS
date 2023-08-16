@@ -13,7 +13,7 @@
 #'
 #' @import websocket
 #' @importFrom openssl sha256
-#' @importFrom jsonlite base64_encode
+#' @import jsonlite
 #' @export
 #'
 #' @examples
