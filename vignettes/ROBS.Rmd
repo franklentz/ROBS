@@ -1,0 +1,50 @@
+---
+title: "ROBS"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{ROBS}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r warning=FALSE, echo=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(
+	message = TRUE,
+	warning = FALSE,
+	include = FALSE
+)
+library(ROBS)
+```
+
+
+This package enables you to control OBS through the OBS Websockets Server.
+Its strongly rely on the *websocket* package.
+
+### OBS Websocket Server in OBS
+
+OBS must be running (the package has been tested with version 29) and you need to start the websockets server.
+You will find the websocket server in Tools > Websockets server Settings
+Make sure 
+
+### Connection and Identification
+
+There are three steps to start interacting with OBS Webserver once it is running
+
+- Create an OBSWebsocket (this is the object you will use to interact with OBS through the websockets server
+- Establish a connection with the server
+- Identify and authenticate. If authentication has been activated on the OBS Websockets server, you will need to supply the password
+
+```
+library(ROBS)
+myobs <- createOBSWebsocket() 
+connectToOBS(obs = myobs)
+identifyToOBS(obs = myobs, eventSub = "33", password = "myObsWebsocketsServerPassword")
+```

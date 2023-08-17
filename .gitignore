@@ -3,3 +3,6 @@
 .RData
 .Ruserdata
 TEMP
+inst/doc
+/doc/
+/Meta/
