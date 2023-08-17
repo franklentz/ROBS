@@ -6,7 +6,8 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of ROBS is to …
+This package enables you to control OBS through the OBS Websockets
+Server. Its strongly rely on the *websocket* package.
 
 ## Installation
 
@@ -17,18 +18,6 @@ You can install the development version of ROBS from
 # install.packages("devtools")
 devtools::install_github("franklentz/ROBS")
 ```
-
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-``` r
-library(ROBS)
-## basic example code
-```
-
-This package enables you to control OBS through the OBS Websockets
-Server. Its strongly rely on the *websocket* package.
 
 ### OBS Websocket Server in OBS
 
