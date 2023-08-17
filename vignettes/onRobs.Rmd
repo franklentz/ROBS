@@ -1,8 +1,8 @@
 ---
-title: "ROBS"
+title: "onRobs"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{ROBS}
+  %\VignetteIndexEntry{onRobs}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -21,7 +21,7 @@ knitr::opts_chunk$set(
 	warning = FALSE,
 	include = FALSE
 )
-library(ROBS)
+#library(onRobS)
 ```
 
 
@@ -43,7 +43,7 @@ There are three steps to start interacting with OBS Webserver once it is running
 - Identify and authenticate. If authentication has been activated on the OBS Websockets server, you will need to supply the password
 
 ```
-library(ROBS)
+library(onRobs)
 myobs <- createOBSWebsocket() 
 connectToOBS(obs = myobs)
 identifyToOBS(obs = myobs, eventSub = "33", password = "myObsWebsocketsServerPassword")

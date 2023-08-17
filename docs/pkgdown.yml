@@ -2,9 +2,9 @@ pandoc: 3.1.1
 pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
-  ROBS: ROBS.html
-last_built: 2023-08-17T05:42Z
+  onRobs: onRobs.html
+last_built: 2023-08-17T08:23Z
 urls:
-  reference: https://franklentz.github.io/ROBS/reference
-  article: https://franklentz.github.io/ROBS/articles
+  reference: https://franklentz.github.io/onRobs/reference
+  article: https://franklentz.github.io/onRobs/articles
 
