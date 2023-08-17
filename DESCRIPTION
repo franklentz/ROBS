@@ -2,8 +2,8 @@ Package: onRobs
 Type: Package
 Title: R client for obs-websocket
 Version: 0.1.0
-Author: Frank Lentz
-Maintainer: Frank Lentz
+Author: FML
+Maintainer: FML
 Description: Control OBS using R sending requests to an OBS Websockets Server
 License: What license is it under?
 Encoding: UTF-8
@@ -13,8 +13,8 @@ Suggests:
     rmarkdown,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
-URL: https://github.com/franklentz/ROBS, https://franklentz.github.io/ROBS/
-BugReports: https://github.com/franklentz/ROBS/issues
+URL: https://github.com/franklentz/ROBS, https://franklentz.github.io/onRobs/
+BugReports: https://github.com/franklentz/onRobs/issues
 Imports: 
     jsonlite,
     openssl,
@@ -24,4 +24,4 @@ Imports:
 RoxygenNote: 7.2.3
 VignetteBuilder: knitr
 Vignettes:
-  ROBS: vignettes/ROBS.Rmd
+  ROBS: vignettes/onRobs.Rmd

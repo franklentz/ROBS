@@ -1,7 +1,7 @@
 #' @description
-#' ROBS uses OBS Websockets to control OBS from R
+#' onRobs uses OBS Websockets to control OBS from R
 #' To learn more about ROBS, start with the vignettes:
-#' `browseVignettes(package = "ROBS")`
+#' `browseVignettes(package = "onRobs")`
 #' @keywords internal
 #' @import websocket
 #' @import jsonlite
