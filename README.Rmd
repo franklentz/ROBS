@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# ROBS
+# onRobs
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -23,11 +23,11 @@ Its strongly rely on the *websocket* package.
 
 ## Installation
 
-You can install the development version of ROBS from [GitHub](https://github.com/) with:
+You can install the development version of onRobs from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("franklentz/ROBS")
+devtools::install_github("franklentz/onRobs")
 ```
 
 ### OBS Websocket Server in OBS
@@ -45,7 +45,7 @@ There are three steps to start interacting with OBS Webserver once it is running
 - Identify and authenticate. If authentication has been activated on the OBS Websockets server, you will need to supply the password
 
 ```
-library(ROBS)
+library(onRobs)
 myobs <- createOBSWebsocket() 
 connectToOBS(obs = myobs)
 identifyToOBS(obs = myobs, eventSub = "33", password = "myObsWebsocketsServerPassword")

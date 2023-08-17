@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# ROBS
+# onRobs
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -11,12 +11,12 @@ Server. Its strongly rely on the *websocket* package.
 
 ## Installation
 
-You can install the development version of ROBS from
+You can install the development version of onRobs from
 [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("franklentz/ROBS")
+devtools::install_github("franklentz/onRobs")
 ```
 
 ### OBS Websocket Server in OBS
@@ -38,7 +38,7 @@ running
 
 <!-- -->
 
-    library(ROBS)
+    library(onRobs)
     myobs <- createOBSWebsocket() 
     connectToOBS(obs = myobs)
     identifyToOBS(obs = myobs, eventSub = "33", password = "myObsWebsocketsServerPassword")

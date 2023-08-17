@@ -1,11 +1,10 @@
-Package: ROBS
+Package: onRobs
 Type: Package
 Title: R client for obs-websocket
 Version: 0.1.0
-Author: FML
-Maintainer: FML <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author: Frank Lentz
+Maintainer: Frank Lentz
+Description: Control OBS using R sending requests to an OBS Websockets Server
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
