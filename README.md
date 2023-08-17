@@ -1,6 +1,8 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+<a href="https://franklentz.github.io/onRobs/"><img src="man/figures/logo.png" align="right" height="139" alt="onRobs website" /></a>
+
 # onRobs
 
 <!-- badges: start -->

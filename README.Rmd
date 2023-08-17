@@ -12,6 +12,7 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
+<a href="https://franklentz.github.io/onRobs/"><img src="man/figures/logo.png" align="right" height="139" alt="onRobs website" /></a>
 
 # onRobs
 
