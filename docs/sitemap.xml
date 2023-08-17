@@ -1,78 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>/404.html</loc>
+    <loc>https://franklentz.github.io/ROBS/404.html</loc>
   </url>
   <url>
-    <loc>/articles/index.html</loc>
+    <loc>https://franklentz.github.io/ROBS/articles/index.html</loc>
   </url>
   <url>
-    <loc>/articles/ROBS.html</loc>
+    <loc>https://franklentz.github.io/ROBS/articles/ROBS.html</loc>
   </url>
   <url>
-    <loc>/authors.html</loc>
+    <loc>https://franklentz.github.io/ROBS/authors.html</loc>
   </url>
   <url>
-    <loc>/index.html</loc>
+    <loc>https://franklentz.github.io/ROBS/index.html</loc>
   </url>
   <url>
-    <loc>/reference/connectToOBS.html</loc>
+    <loc>https://franklentz.github.io/ROBS/reference/connectToOBS.html</loc>
   </url>
   <url>
-    <loc>/reference/createOBSWebsocket.html</loc>
+    <loc>https://franklentz.github.io/ROBS/reference/createOBSWebsocket.html</loc>
   </url>
   <url>
-    <loc>/reference/CreateScene.html</loc>
+    <loc>https://franklentz.github.io/ROBS/reference/CreateScene.html</loc>
   </url>
   <url>
-    <loc>/reference/disconnectFromOBS.html</loc>
+    <loc>https://franklentz.github.io/ROBS/reference/disconnectFromOBS.html</loc>
   </url>
   <url>
-    <loc>/reference/GetCurrentPreviewScene.html</loc>
+    <loc>https://franklentz.github.io/ROBS/reference/GetCurrentPreviewScene.html</loc>
   </url>
   <url>
-    <loc>/reference/GetCurrentProgramScene.html</loc>
+    <loc>https://franklentz.github.io/ROBS/reference/GetCurrentProgramScene.html</loc>
   </url>
   <url>
-    <loc>/reference/GetGroupList.html</loc>
+    <loc>https://franklentz.github.io/ROBS/reference/GetGroupList.html</loc>
   </url>
   <url>
-    <loc>/reference/GetSceneItemList.html</loc>
+    <loc>https://franklentz.github.io/ROBS/reference/GetSceneItemList.html</loc>
   </url>
   <url>
-    <loc>/reference/GetSceneList.html</loc>
+    <loc>https://franklentz.github.io/ROBS/reference/GetSceneList.html</loc>
   </url>
   <url>
-    <loc>/reference/GetSceneSceneTransitionOverride.html</loc>
+    <loc>https://franklentz.github.io/ROBS/reference/GetSceneSceneTransitionOverride.html</loc>
   </url>
   <url>
-    <loc>/reference/hello.html</loc>
+    <loc>https://franklentz.github.io/ROBS/reference/hello.html</loc>
   </url>
   <url>
-    <loc>/reference/identifyToOBS.html</loc>
+    <loc>https://franklentz.github.io/ROBS/reference/identifyToOBS.html</loc>
   </url>
   <url>
-    <loc>/reference/index.html</loc>
+    <loc>https://franklentz.github.io/ROBS/reference/index.html</loc>
   </url>
   <url>
-    <loc>/reference/OBSWebSocket.html</loc>
+    <loc>https://franklentz.github.io/ROBS/reference/OBSWebSocket.html</loc>
   </url>
   <url>
-    <loc>/reference/RemoveScene.html</loc>
+    <loc>https://franklentz.github.io/ROBS/reference/RemoveScene.html</loc>
   </url>
   <url>
-    <loc>/reference/ROBS-package.html</loc>
+    <loc>https://franklentz.github.io/ROBS/reference/ROBS-package.html</loc>
   </url>
   <url>
-    <loc>/reference/SetCurrentPreviewScene.html</loc>
+    <loc>https://franklentz.github.io/ROBS/reference/SetCurrentPreviewScene.html</loc>
   </url>
   <url>
-    <loc>/reference/SetCurrentProgramScene.html</loc>
+    <loc>https://franklentz.github.io/ROBS/reference/SetCurrentProgramScene.html</loc>
   </url>
   <url>
-    <loc>/reference/SetSceneName.html</loc>
+    <loc>https://franklentz.github.io/ROBS/reference/SetSceneName.html</loc>
   </url>
   <url>
-    <loc>/reference/SetSceneSceneTransitionOverride.html</loc>
+    <loc>https://franklentz.github.io/ROBS/reference/SetSceneSceneTransitionOverride.html</loc>
   </url>
 </urlset>
