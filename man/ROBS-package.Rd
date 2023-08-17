@@ -14,6 +14,7 @@ To learn more about ROBS, start with the vignettes:
 Useful links:
 \itemize{
   \item \url{https://github.com/franklentz/ROBS}
+  \item \url{https://franklentz.github.io/ROBS/}
   \item Report bugs at \url{https://github.com/franklentz/ROBS/issues}
 }
 
