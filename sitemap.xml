@@ -4,6 +4,9 @@
     <loc>https://franklentz.github.io/onRobs/404.html</loc>
   </url>
   <url>
+    <loc>https://franklentz.github.io/onRobs/LICENSE.html</loc>
+  </url>
+  <url>
     <loc>https://franklentz.github.io/onRobs/articles/index.html</loc>
   </url>
   <url>
@@ -56,6 +59,9 @@
   </url>
   <url>
     <loc>https://franklentz.github.io/onRobs/reference/SetSceneSceneTransitionOverride.html</loc>
+  </url>
+  <url>
+    <loc>https://franklentz.github.io/onRobs/reference/ViewLog.html</loc>
   </url>
   <url>
     <loc>https://franklentz.github.io/onRobs/reference/connectToOBS.html</loc>
