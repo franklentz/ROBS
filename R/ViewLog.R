@@ -15,7 +15,7 @@
 #' connectToOBS(obs = myobs)
 #' identifyToOBS(obs = myobs, eventSub = "33", password = "OBSwebsocketServerPassword")
 #' GetSceneSceneTransitionOverride(obs = myobs, scene = "Muti Cam Scene" )
-#' ViewLog()
+#' ViewLog(myobs)
 #' disconnectFromOBS(myobs)
 #' }
 ViewLog <- function(obs){

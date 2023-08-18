@@ -72,8 +72,12 @@
 <dd><p>The name of the scene to switch to (must exist in obs)</p></dd>
 
 
-<dt>requestID</dt>
-<dd><p>The requestID used to provide feedback. Default UUIDgenerate()</p></dd>
+<dt>requestId</dt>
+<dd><p>The requestId used to provide feedback. Default UUIDgenerate()</p></dd>
+
+
+<dt>verbose</dt>
+<dd><p>More messages and outputs if TRUE. Default: TRUE</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -83,63 +87,14 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
 <span class="r-in"><span><span class="va">myobs</span> <span class="op">&lt;-</span> <span class="fu"><a href="createOBSWebsocket.html">createOBSWebsocket</a></span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> ws://127.0.0.1:4455</span>
 <span class="r-in"><span><span class="fu"><a href="connectToOBS.html">connectToOBS</a></span><span class="op">(</span>obs <span class="op">=</span> <span class="va">myobs</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;OBSWebSocket&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Inherits from: &lt;WebSocket&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Public:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     challenge: NULL</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     clearAccessLogChannels: function (channels = c("all")) </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     clearErrorLogChannels: function (channels = c("all")) </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     clone: function (deep = FALSE) </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     close: function (code = 1000L, reason = "") </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     connect: function () </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     initialize: function (url, protocols = character(0), headers = NULL, autoConnect = TRUE, </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     obsWebSocketVersion: Unknown</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     onClose: function (callback) </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     onError: function (callback) </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     onMessage: function (callback) </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     onOpen: function (callback) </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     outlog: data.frame</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     protocol: function () </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     readyState: function () </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     salt: NULL</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     send: function (msg) </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     setAccessLogChannels: function (channels = c("all")) </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     setErrorLogChannels: function (channels = c("all")) </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Private:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     accessLogChannelValues: none connect disconnect control frame_header frame_paylo ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     accessLogChannels: function (channels, stompValue) </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     callbacks: environment</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     errorLogChannelValues: none devel library info warn rerror fatal all</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     errorLogChannels: function (channels, stompValue) </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     getInvoker: function (eventName) </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     pendingConnect: FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     wsObj: externalptr</span>
 <span class="r-in"><span><span class="fu"><a href="identifyToOBS.html">identifyToOBS</a></span><span class="op">(</span>obs <span class="op">=</span> <span class="va">myobs</span>, eventSub <span class="op">=</span> <span class="st">"33"</span>, password <span class="op">=</span> <span class="st">"OBSwebsocketServerPassword"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">SetCurrentProgramScene</span><span class="op">(</span>obs <span class="op">=</span> <span class="va">myobs</span>, scene <span class="op">=</span> <span class="st">"Muti Cam Scene"</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>           {</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>           "op": 6,</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>           "d": {</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>                   "requestType": "SetCurrentProgramScene","requestId": "590ce602-b29d-49ed-9207-6b36c7f5a9f0","requestData": {</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>     "sceneName": "Muti Cam Scene"</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   }}</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>                 }</span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> invalid state</span>
 <span class="r-in"><span><span class="fu">SetCurrentProgramScene</span><span class="op">(</span>obs <span class="op">=</span> <span class="va">myobs</span>, scene <span class="op">=</span> <span class="st">"BRB"</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>           {</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>           "op": 6,</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>           "d": {</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>                   "requestType": "SetCurrentProgramScene","requestId": "3906217c-fc90-40c1-a17e-a8122df61833","requestData": {</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>     "sceneName": "BRB"</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   }}</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>                 }</span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> invalid state</span>
 <span class="r-in"><span><span class="fu"><a href="disconnectFromOBS.html">disconnectFromOBS</a></span><span class="op">(</span><span class="va">myobs</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
