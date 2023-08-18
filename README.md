@@ -1,18 +1,12 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-<a href="https://franklentz.github.io/onRobs/"><img src="man/figures/logo.png" align="right" height="139" alt="onRobs website" /></a>
-
 # onRobs
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-This package enables you to control OBS through the OBS Websockets
-Server. Its strongly rely on the *websocket* package. It is implementing
-[obs-websockets 5.1.0
-Protocol](https://github.com/obsproject/obs-websocket/blob/master/docs/generated/protocol.md#createscenecollection)
-on R.
+The goal of onRobs is to …
 
 ## Installation
 
@@ -24,26 +18,35 @@ You can install the development version of onRobs from
 devtools::install_github("franklentz/onRobs")
 ```
 
-### OBS Websocket Server in OBS
+## Example
 
-OBS must be running (the package has been tested with version 29) and
-you need to start the websockets server. You will find the websocket
-server in Tools \> Websockets server Settings Make sure
+This is a basic example which shows you how to solve a common problem:
 
-### Connection and Identification
+``` r
+library(onRobs)
+## basic example code
+```
 
-There are three steps to start interacting with OBS Webserver once it is
-running
+What is special about using `README.Rmd` instead of just `README.md`?
+You can include R chunks like so:
 
-- Create an OBSWebsocket (this is the object you will use to interact
-  with OBS through the websockets server
-- Establish a connection with the server
-- Identify and authenticate. If authentication has been activated on the
-  OBS Websockets server, you will need to supply the password
+``` r
+summary(cars)
+#>      speed           dist       
+#>  Min.   : 4.0   Min.   :  2.00  
+#>  1st Qu.:12.0   1st Qu.: 26.00  
+#>  Median :15.0   Median : 36.00  
+#>  Mean   :15.4   Mean   : 42.98  
+#>  3rd Qu.:19.0   3rd Qu.: 56.00  
+#>  Max.   :25.0   Max.   :120.00
+```
 
-<!-- -->
+You’ll still need to render `README.Rmd` regularly, to keep `README.md`
+up-to-date. `devtools::build_readme()` is handy for this.
 
-    library(onRobs)
-    myobs <- createOBSWebsocket() 
-    connectToOBS(obs = myobs)
-    identifyToOBS(obs = myobs, eventSub = "33", password = "myObsWebsocketsServerPassword")
+You can also embed plots, for example:
+
+<img src="man/figures/README-pressure-1.png" width="100%" />
+
+In that case, don’t forget to commit and push the resulting figure
+files, so they display on GitHub and CRAN.

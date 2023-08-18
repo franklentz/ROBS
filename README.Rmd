@@ -12,16 +12,13 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
-<a href="https://franklentz.github.io/onRobs/"><img src="man/figures/logo.png" align="right" height="139" alt="onRobs website" /></a>
 
 # onRobs
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-This package enables you to control OBS through the OBS Websockets Server.
-Its strongly relies on the *websocket* package.
-It is implementing [obs-websockets 5.1.0 Protocol](https://github.com/obsproject/obs-websocket/blob/master/docs/generated/protocol.md#createscenecollection) on R.
+The goal of onRobs is to ...
 
 ## Installation
 
@@ -32,23 +29,27 @@ You can install the development version of onRobs from [GitHub](https://github.c
 devtools::install_github("franklentz/onRobs")
 ```
 
-### OBS Websocket Server in OBS
+## Example
 
-OBS must be running (the package has been tested with version 29) and you need to start the websockets server.
-You will find the websocket server in Tools > Websockets server Settings
-Make sure 
+This is a basic example which shows you how to solve a common problem:
 
-### Connection and Identification
-
-There are three steps to start interacting with OBS Webserver once it is running
-
-- Create an OBSWebsocket (this is the object you will use to interact with OBS through the websockets server
-- Establish a connection with the server
-- Identify and authenticate. If authentication has been activated on the OBS Websockets server, you will need to supply the password
-
-```
+```{r example}
 library(onRobs)
-myobs <- createOBSWebsocket() 
-connectToOBS(obs = myobs)
-identifyToOBS(obs = myobs, eventSub = "33", password = "myObsWebsocketsServerPassword")
+## basic example code
 ```
+
+What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+
+```{r cars}
+summary(cars)
+```
+
+You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
+
+You can also embed plots, for example:
+
+```{r pressure, echo = FALSE}
+plot(pressure)
+```
+
+In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
