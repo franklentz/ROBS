@@ -5,7 +5,7 @@
 #' Create a new scene in the current collection in OBS.
 #'
 #' @param obs An obs websocket with an active connection. Default obs
-#' @param sceneName The name of the scene to switch to create
+#' @param sceneName The name of the scene to create
 #' @param requestId The requestId used to provide feedback. Default UUIDgenerate()
 #' @param verbose More messages and outputs if TRUE. Default: TRUE
 #'
@@ -35,7 +35,7 @@ CreateScene <- function(obs = obs, sceneName = "New", requestId = uuid::UUIDgene
   opCode6(obs = obs,
           requestType = "CreateScene",
           requestId = requestId,
-          requestData,
+          requestData = requestData,
           verbose = verbose)
 
   # Log the request

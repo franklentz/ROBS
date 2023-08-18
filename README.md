@@ -9,7 +9,10 @@
 <!-- badges: end -->
 
 This package enables you to control OBS through the OBS Websockets
-Server. Its strongly rely on the *websocket* package.
+Server. Its strongly rely on the *websocket* package. It is implementing
+[obs-websockets 5.1.0
+Protocol](https://github.com/obsproject/obs-websocket/blob/master/docs/generated/protocol.md#createscenecollection)
+on R.
 
 ## Installation
 

@@ -14,7 +14,7 @@ CreateScene(
 \arguments{
 \item{obs}{An obs websocket with an active connection. Default obs}
 
-\item{sceneName}{The name of the scene to switch to create}
+\item{sceneName}{The name of the scene to create}
 
 \item{requestId}{The requestId used to provide feedback. Default UUIDgenerate()}
 
