@@ -9,19 +9,21 @@ GetSceneList(obs = obs, requestId = uuid::UUIDgenerate(), verbose = TRUE)
 \arguments{
 \item{obs}{an obs websocket with an active connection. Default obs}
 
-\item{requestID}{The requestID used to provide feedback. Default UUIDgenerate()}
+\item{requestId}{The requestId used to provide feedback. Default UUIDgenerate()}
+
+\item{verbose}{More messages and outputs if TRUE. Default: TRUE}
 }
 \description{
 Get the list of the scenes in OBS using an existing connection to OBS.
 }
 \examples{
-
+\dontrun{
 myobs <- createOBSWebsocket()
 connectToOBS(obs = myobs)
 identifyToOBS(obs = myobs, eventSub = "33", password = "OBSwebsocketServerPassword")
 GetSceneList(obs = myobs)
 disconnectFromOBS(myobs)
-
+}
 }
 \author{
 FML

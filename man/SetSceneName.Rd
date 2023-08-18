@@ -19,19 +19,22 @@ SetSceneName(
 
 \item{newSceneName}{The new name of the scene to set the name to}
 
-\item{requestID}{The requestID used to provide feedback. Default UUIDgenerate()}
+\item{requestId}{The requestId used to provide feedback. Default UUIDgenerate()}
+
+\item{verbose}{More messages and outputs if TRUE. Default: TRUE}
 }
 \description{
 Sets the name of a scene (rename) from OBS using an existing connection to OBS.
 }
 \examples{
-
+\dontrun{
 myobs <- createOBSWebsocket()
 connectToOBS(obs = myobs)
 identifyToOBS(obs = myobs, eventSub = "33", password = "OBSwebsocketServerPassword")
 SetSceneName(obs = myobs, scene = "Muti Cam Scene")
 SetSceneName(obs = myobs, scene = "BRB")
 disconnectFromOBS(myobs)
+}
 }
 \author{
 FML

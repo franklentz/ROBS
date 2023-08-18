@@ -6,20 +6,21 @@
 
 #'
 #' @param obs an obs websocket with an active connection. Default obs
-#' @param requestID The requestID used to provide feedback. Default UUIDgenerate()
+#' @param requestId The requestId used to provide feedback. Default UUIDgenerate()
+#' @param verbose More messages and outputs if TRUE. Default: TRUE
 
 #' @author FML
 #'
 #' @export
 #'
 #' @examples
-#'
+#' \dontrun{
 #' myobs <- createOBSWebsocket()
 #' connectToOBS(obs = myobs)
 #' identifyToOBS(obs = myobs, eventSub = "33", password = "OBSwebsocketServerPassword")
 #' GetSceneList(obs = myobs)
 #' disconnectFromOBS(myobs)
-#'
+#'}
 GetSceneList <- function(obs = obs,  requestId = uuid::UUIDgenerate(), verbose = TRUE ){
 
   opCode6(obs = obs, requestType = "GetSceneList", requestId = requestId, verbose = verbose)

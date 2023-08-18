@@ -16,19 +16,22 @@ SetCurrentPreviewScene(
 
 \item{sceneName}{The name of the scene to switch to (must exist in obs)}
 
-\item{requestID}{The requestID used to provide feedback. Default UUIDgenerate()}
+\item{requestId}{The requestId used to provide feedback. Default UUIDgenerate()}
+
+\item{verbose}{More messages and outputs if TRUE. Default: TRUE}
 }
 \description{
 Changes the Scene of the current preview using an existing connection to OBS.
 }
 \examples{
-
+\dontrun{
 myobs <- createOBSWebsocket()
 connectToOBS(obs = myobs)
 identifyToOBS(obs = myobs, eventSub = "33", password = "OBSwebsocketServerPassword")
 SetCurrentPreviewScene(obs = myobs, sceneName = "Muti Cam Scene")
 SetCurrentPreviewScene(obs = myobs, sceneName = "BRB")
 disconnectFromOBS(myobs)
+}
 }
 \author{
 FML

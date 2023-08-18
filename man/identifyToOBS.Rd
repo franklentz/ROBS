@@ -19,11 +19,12 @@ If authentication is on the OBS websocket server is activated, the password must
 The WebSocket server (Use "Tools" menu in OBS) must be activated.
 }
 \examples{
-
+\dontrun{
 myobs <- createOBSWebsocket()
 connectToOBS(obs = myobs)
 identifyToOBS(obs = myobs, eventSub = "33", password = "OBSwebsocketServerPassword")
 disconnectFromOBS(myobs)
+}
 }
 \author{
 FML

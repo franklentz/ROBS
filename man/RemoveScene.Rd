@@ -16,19 +16,22 @@ RemoveScene(
 
 \item{sceneName}{The name of the scene to remove (must exist in obs)}
 
-\item{requestID}{The requestID used to provide feedback. Default UUIDgenerate()}
+\item{requestId}{The requestId used to provide feedback. Default UUIDgenerate()}
+
+\item{verbose}{More messages and outputs if TRUE. Default: TRUE}
 }
 \description{
 Remove a Scene from OBS using an existing connection to OBS.
 }
 \examples{
-
+\dontrun{
 myobs <- createOBSWebsocket()
 connectToOBS(obs = myobs)
 identifyToOBS(obs = myobs, eventSub = "33", password = "OBSwebsocketServerPassword")
 RemoveScene(obs = myobs, sceneName = "Muti Cam Scene")
 RemoveScene(obs = myobs, sceneName = "BRB")
 disconnectFromOBS(myobs)
+}
 }
 \author{
 FML

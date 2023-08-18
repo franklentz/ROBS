@@ -22,18 +22,24 @@ SetSceneSceneTransitionOverride(
 
 \item{transitionDuration}{Duration to use for any overridden transition. Specify null to remove. A number >= 50, <= 20000.}
 
-\item{requestID}{The requestID used to provide feedback. Default UUIDgenerate()}
+\item{requestId}{The requestId used to provide feedback. Default UUIDgenerate()}
+
+\item{verbose}{More messages and outputs if TRUE. Default: TRUE}
 }
 \description{
 Sets the scene "transition override" for a scene from OBS using an existing connection to OBS.
 }
 \examples{
-
+\dontrun{
 myobs <- createOBSWebsocket()
 connectToOBS(obs = myobs)
 identifyToOBS(obs = myobs, eventSub = "33", password = "OBSwebsocketServerPassword")
-SetSceneSceneTransitionOverride(obs = myobs, scene = "Muti Cam Scene", transitionName = "a name", transitionDuration = 500)
+SetSceneSceneTransitionOverride(obs = myobs,
+                                scene = "Muti Cam Scene",
+                                transitionName = "a name",
+                                transitionDuration = 500)
 disconnectFromOBS(myobs)
+}
 }
 \author{
 FML

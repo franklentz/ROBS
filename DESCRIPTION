@@ -4,8 +4,8 @@ Title: R client for obs-websocket
 Version: 0.1.0
 Author: FML
 Maintainer: FML <FML@somewhere.net>
-Description: Control OBS using R sending requests to an OBS Websockets Server
-License: What license is it under?
+Description: Control OBS using R sending requests to an OBS Websockets Server.
+License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
 Suggests: 

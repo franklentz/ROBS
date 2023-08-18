@@ -16,11 +16,12 @@ Create a websocket object to connect to OBS and send commands.
 The WebSocket server (Use "Tools" menu in OBS) must be activated.
 }
 \examples{
-
+\dontrun{
 myobs <- createOBSWebsocket()
 connectToOBS(obs = myobs)
 identifyToOBS(obs = myobs, eventSub = "33", password = "OBSwebsocketServerPassword")
 disconnectFromOBS(myobs)
+}
 }
 \author{
 FML

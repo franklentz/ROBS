@@ -9,11 +9,12 @@
 #' @author FML
 #' @export
 #' @examples
-#'
-#' myobs <- createOBSWebsocket()
+#' \dontrun{
+#'  myobs <- createOBSWebsocket()
 #' connectToOBS(obs = myobs)
 #' identifyToOBS(obs = myobs, eventSub = "33", password = "OBSwebsocketServerPassword")
 #' disconnectFromOBS(myobs)
+#' }
 
 # ----------------------------------------------------------------
 
