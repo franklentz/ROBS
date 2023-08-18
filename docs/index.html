@@ -70,15 +70,14 @@
   </div>
 </nav><div class="container template-home">
 <div class="row">
-  <main id="main" class="col-md-9"><p><a href="https://franklentz.github.io/onRobs/"><img src="reference/figures/logo.png" align="right" height="139" alt="onRobs website"></a></p>
-<div class="section level1">
+  <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header">
 <img src="logo.png" class="logo" alt=""><h1 id="onrobs">onRobs<a class="anchor" aria-label="anchor" href="#onrobs"></a>
 </h1>
 </div>
 <!-- badges: start -->
 <!-- badges: end -->
-<p>This package enables you to control OBS through the OBS Websockets Server. Its strongly relies on the <em>websocket</em> package. It is implementing <a href="https://github.com/obsproject/obs-websocket/blob/master/docs/generated/protocol.md#createscenecollection" class="external-link">obs-websockets 5.1.0 Protocol</a> on R.</p>
+<p>The goal of onRobs is to …</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
@@ -86,28 +85,22 @@
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("devtools")</span></span>
 <span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"franklentz/onRobs"</span><span class="op">)</span></span></code></pre></div>
-<div class="section level3">
-<h3 id="obs-websocket-server-in-obs">OBS Websocket Server in OBS<a class="anchor" aria-label="anchor" href="#obs-websocket-server-in-obs"></a>
-</h3>
-<p>OBS must be running (the package has been tested with version 29) and you need to start the websockets server. You will find the websocket server in Tools &gt; Websockets server Settings Make sure</p>
 </div>
-<div class="section level3">
-<h3 id="connection-and-identification">Connection and Identification<a class="anchor" aria-label="anchor" href="#connection-and-identification"></a>
-</h3>
-<p>There are three steps to start interacting with OBS Webserver once it is running</p>
-<ul>
-<li>Create an OBSWebsocket (this is the object you will use to interact with OBS through the websockets server</li>
-<li>Establish a connection with the server</li>
-<li>Identify and authenticate. If authentication has been activated on the OBS Websockets server, you will need to supply the password</li>
-</ul>
-<!-- --><div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">library</span>(onRobs)</span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>myobs <span class="ot">&lt;-</span> <span class="fu">createOBSWebsocket</span>() </span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="fu">connectToOBS</span>(<span class="at">obs =</span> myobs)</span>
-<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="fu">identifyToOBS</span>(<span class="at">obs =</span> myobs, <span class="at">eventSub =</span> <span class="st">"33"</span>, <span class="at">password =</span> <span class="st">"myObsWebsocketsServerPassword"</span>)</span></code></pre></div>
+<div class="section level2">
+<h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
+</h2>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/franklentz/onRobs" class="external-link">onRobs</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># myobs &lt;- createOBSWebsocket() </span></span>
+<span><span class="co"># connectToOBS(obs = myobs)</span></span>
+<span><span class="co"># identifyToOBS(obs = myobs, eventSub = "33", password = "myObsWebsocketsServerPassword")</span></span>
+<span><span class="co"># CreateScene(obs = myobs, sceneName = "New Scene")</span></span>
+<span><span class="co"># SetCurrentProgramScene(obs = myobs, scene = "Muti Cam Scene")</span></span>
+<span><span class="co"># SetCurrentProgramScene(obs = myobs, scene = "BRB")</span></span>
+<span><span class="co"># disconnectFromOBS(myobs)</span></span></code></pre></div>
 </div>
 </div>
-</div>
-
   </main><aside class="col-md-3"><div class="links">
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
