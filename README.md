@@ -6,7 +6,12 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of onRobs is to …
+This package enables you to control OBS through the OBS Websockets
+Server. Its strongly rely on the [websocket
+package](https://cran.r-project.org/web/packages/websocket/index.html).
+
+If you are new here, check the [Get
+started](https://franklentz.github.io/onRobs/articles/onRobs.html) page.
 
 ## Installation
 
