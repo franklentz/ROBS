@@ -35,7 +35,7 @@ myobs <- createOBSWebsocket()
 connectToOBS(obs = myobs)
 identifyToOBS(obs = myobs, eventSub = "33", password = "OBSwebsocketServerPassword")
 SetSceneSceneTransitionOverride(obs = myobs,
-                                scene = "Muti Cam Scene",
+                                sceneName = "Muti Cam Scene",
                                 transitionName = "a name",
                                 transitionDuration = 500)
 disconnectFromOBS(myobs)

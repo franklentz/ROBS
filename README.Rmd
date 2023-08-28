@@ -18,7 +18,8 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-This package enables you to control OBS through the OBS Websockets Server. Its strongly rely on the [websocket package](https://cran.r-project.org/web/packages/websocket/index.html).
+This package on R OBS (pronounce on air OBS) enables you to control OBS through the OBS Websockets Server using R functions. Its strongly relies on the [websocket package](https://cran.r-project.org/web/packages/websocket/index.html).
+
 
 If you are new here, check the [Get started](https://franklentz.github.io/onRobs/articles/onRobs.html) page. 
 
@@ -32,7 +33,6 @@ devtools::install_github("franklentz/onRobs")
 ```
 
 ## Example
-
 
 
 ```{r example}

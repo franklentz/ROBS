@@ -25,14 +25,28 @@ knitr::opts_chunk$set(
 ```
 
 
-This package enables you to control OBS through the OBS Websockets Server.
+This package on R OBS (pronounce on air OBS) enables you to control OBS through the OBS Websockets Server using R functions.
 Its strongly rely on the *websocket* package.
 
 ### OBS Websocket Server in OBS
 
-OBS must be running (the package has been tested with version 29) and you need to start the websockets server.
-You will find the websocket server in Tools > Websockets server Settings
-Make sure 
+OBS must be running (the package has been tested with version 29) and you need to start the websockets server. obs-websocket is  included by default with OBS Studio since version 28.0.0. Previous version were relying on a plugin.
+
+You will find the websocket server in **Tools > Websockets server Settings**
+
+Make sure to tick the *"Enable WebSockets server"* check box and if you want to use authentication (strongly encouraged), also tick the *"Enable authentication"* checkbox and choose a password.
+
+For more detailed information about OBS websockets, you can read the [obs-websocket 5.1.0 Protocol](https://github.com/obsproject/obs-websocket/blob/release/5.2.3/docs/generated/protocol.md)
+
+## Installation
+
+You can install the development version of onRobs from [GitHub](https://github.com/franklentz/onRobs) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("franklentz/onRobs")
+```
+
 
 ### Connection and Identification
 
@@ -47,4 +61,31 @@ library(onRobs)
 myobs <- createOBSWebsocket() 
 connectToOBS(obs = myobs)
 identifyToOBS(obs = myobs, eventSub = "33", password = "myObsWebsocketsServerPassword")
+```
+
+### Control the scenes of your stream
+
+Once identified, you can call the currently implemented functions documented in the [reference list](https://franklentz.github.io/onRobs/reference/index.html)
+
+Once identified (see above), if you want to change the current scene of your stream, you can simply call :
+
+```
+# myobs is the websocket object created in the previous section
+# the name of the scene must exist in OBS
+
+# Change the scene of the stream to "BRB" (Be Right Back)
+SetCurrentProgramScene(obs = myobs, sceneName  = "BRB")
+
+# Change the scene of the stream to "Muti Cam Scene"
+SetCurrentProgramScene(obs = myobs, sceneName  = "Muti Cam Scene")
+
+
+```
+
+
+
+If you want to stop your interactions with OBS:
+
+```
+disconnectFromOBS(myobs)
 ```

@@ -19,8 +19,8 @@
 #' myobs <- createOBSWebsocket()
 #' connectToOBS(obs = myobs)
 #' identifyToOBS(obs = myobs, eventSub = "33", password = "OBSwebsocketServerPassword")
-#' SetCurrentProgramScene(obs = myobs, scene = "Muti Cam Scene")
-#' SetCurrentProgramScene(obs = myobs, scene = "BRB")
+#' SetCurrentProgramScene(obs = myobs, sceneName = "Muti Cam Scene")
+#' SetCurrentProgramScene(obs = myobs, sceneName = "BRB")
 #' disconnectFromOBS(myobs)
 #' }
 

@@ -31,8 +31,7 @@ Sets the name of a scene (rename) from OBS using an existing connection to OBS.
 myobs <- createOBSWebsocket()
 connectToOBS(obs = myobs)
 identifyToOBS(obs = myobs, eventSub = "33", password = "OBSwebsocketServerPassword")
-SetSceneName(obs = myobs, scene = "Muti Cam Scene")
-SetSceneName(obs = myobs, scene = "BRB")
+SetSceneName(obs = myobs, sceneName = "Muti Cam Scene", newSceneName = "SC MultiCam")
 disconnectFromOBS(myobs)
 }
 }

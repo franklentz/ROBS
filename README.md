@@ -6,8 +6,9 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-This package enables you to control OBS through the OBS Websockets
-Server. Its strongly rely on the [websocket
+This package on R OBS (pronounce on air OBS) enables you to control OBS
+through the OBS Websockets Server using R functions. Its strongly relies
+on the [websocket
 package](https://cran.r-project.org/web/packages/websocket/index.html).
 
 If you are new here, check the [Get
