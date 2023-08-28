@@ -84,15 +84,32 @@
 
     
     
-<p>This package enables you to control OBS through the OBS Websockets
-Server. Its strongly rely on the <em>websocket</em> package.</p>
+<p>This package on R OBS (pronounce on air OBS) enables you to control
+OBS through the OBS Websockets Server using R functions. Its strongly
+rely on the <em>websocket</em> package.</p>
 <div class="section level3">
 <h3 id="obs-websocket-server-in-obs">OBS Websocket Server in OBS<a class="anchor" aria-label="anchor" href="#obs-websocket-server-in-obs"></a>
 </h3>
 <p>OBS must be running (the package has been tested with version 29) and
-you need to start the websockets server. You will find the websocket
-server in Tools &gt; Websockets server Settings Make sure</p>
+you need to start the websockets server. obs-websocket is included by
+default with OBS Studio since version 28.0.0. Previous version were
+relying on a plugin.</p>
+<p>You will find the websocket server in <strong>Tools &gt; Websockets
+server Settings</strong></p>
+<p>Make sure to tick the <em>“Enable WebSockets server”</em> check box
+and if you want to use authentication (strongly encouraged), also tick
+the <em>“Enable authentication”</em> checkbox and choose a password.</p>
+<p>For more detailed information about OBS websockets, you can read the
+<a href="https://github.com/obsproject/obs-websocket/blob/release/5.2.3/docs/generated/protocol.md" class="external-link">obs-websocket
+5.1.0 Protocol</a></p>
 </div>
+<div class="section level2">
+<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h2>
+<p>You can install the development version of onRobs from <a href="https://github.com/franklentz/onRobs" class="external-link">GitHub</a> with:</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># install.packages("devtools")</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"franklentz/onRobs"</span><span class="op">)</span></span></code></pre></div>
 <div class="section level3">
 <h3 id="connection-and-identification">Connection and Identification<a class="anchor" aria-label="anchor" href="#connection-and-identification"></a>
 </h3>
@@ -109,6 +126,27 @@ the OBS Websockets server, you will need to supply the password</li>
 <span><span class="va">myobs</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/createOBSWebsocket.html">createOBSWebsocket</a></span><span class="op">(</span><span class="op">)</span> </span>
 <span><span class="fu"><a href="../reference/connectToOBS.html">connectToOBS</a></span><span class="op">(</span>obs <span class="op">=</span> <span class="va">myobs</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/identifyToOBS.html">identifyToOBS</a></span><span class="op">(</span>obs <span class="op">=</span> <span class="va">myobs</span>, eventSub <span class="op">=</span> <span class="st">"33"</span>, password <span class="op">=</span> <span class="st">"myObsWebsocketsServerPassword"</span><span class="op">)</span></span></code></pre>
+</div>
+<div class="section level3">
+<h3 id="control-the-scenes-of-your-stream">Control the scenes of your stream<a class="anchor" aria-label="anchor" href="#control-the-scenes-of-your-stream"></a>
+</h3>
+<p>Once identified, you can call the currently implemented functions
+documented in the <a href="https://franklentz.github.io/onRobs/reference/index.html">reference
+list</a></p>
+<p>Once identified (see above), if you want to change the current scene
+of your stream, you can simply call :</p>
+<pre><code><span><span class="co"># myobs is the websocket object created in the previous section</span></span>
+<span><span class="co"># the name of the scene must exist in OBS</span></span>
+<span></span>
+<span><span class="co"># Change the scene of the stream to "BRB" (Be Right Back)</span></span>
+<span><span class="fu"><a href="../reference/SetCurrentProgramScene.html">SetCurrentProgramScene</a></span><span class="op">(</span>obs <span class="op">=</span> <span class="va">myobs</span>, sceneName  <span class="op">=</span> <span class="st">"BRB"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Change the scene of the stream to "Muti Cam Scene"</span></span>
+<span><span class="fu"><a href="../reference/SetCurrentProgramScene.html">SetCurrentProgramScene</a></span><span class="op">(</span>obs <span class="op">=</span> <span class="va">myobs</span>, sceneName  <span class="op">=</span> <span class="st">"Muti Cam Scene"</span><span class="op">)</span></span>
+<span></span></code></pre>
+<p>If you want to stop your interactions with OBS:</p>
+<pre><code><span><span class="fu"><a href="../reference/disconnectFromOBS.html">disconnectFromOBS</a></span><span class="op">(</span><span class="va">myobs</span><span class="op">)</span></span></code></pre>
+</div>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>
