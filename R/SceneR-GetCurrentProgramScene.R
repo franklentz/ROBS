@@ -27,4 +27,5 @@ GetCurrentProgramScene <- function(obs = obs,  requestId = uuid::UUIDgenerate(),
 
   logThis(obs, requestId, "0", "GetCurrentProgramScene", "Client asked to get the scene name of the current program")
 
+  return(requestId)
 }

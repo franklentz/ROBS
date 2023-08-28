@@ -31,6 +31,6 @@ GetSceneItemList <- function(obs = obs, sceneName = "main", verbose = TRUE, requ
   opCode6(obs = obs, requestType = "GetSceneItemList", requestId = requestId, requestData, verbose)
 
   logThis(obs, requestId, "0", "GetSceneItemList", paste("Client asked to get the Items of", sceneName))
-
+  return(requestId)
 }
 

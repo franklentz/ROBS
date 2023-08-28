@@ -1,14 +1,14 @@
-#' ask for a list of the scenes
+#' Ask for the monitor List
 #'
 #' @description
 #'
-#' Get the list of the scenes in OBS using an existing connection to OBS.
+#' Gets the monitor list using an existing connection to OBS
 
 #'
 #' @param obs an obs websocket with an active connection. Default obs
 #' @param requestId The requestId used to provide feedback. Default UUIDgenerate()
 #' @param verbose More messages and outputs if TRUE. Default: TRUE
-
+#'
 #' @author FML
 #'
 #' @export
@@ -18,14 +18,20 @@
 #' myobs <- createOBSWebsocket()
 #' connectToOBS(obs = myobs)
 #' identifyToOBS(obs = myobs, eventSub = "33", password = "OBSwebsocketServerPassword")
-#' GetSceneList(obs = myobs)
+#' GetMonitorList(obs = myobs)
 #' disconnectFromOBS(myobs)
 #'}
-GetSceneList <- function(obs = obs,  requestId = uuid::UUIDgenerate(), verbose = TRUE ){
 
-  opCode6(obs = obs, requestType = "GetSceneList", requestId = requestId, verbose = verbose)
+GetMonitorList <- function(obs = obs, requestId = uuid::UUIDgenerate(), verbose = TRUE ){
 
-  logThis(obs, requestId, "0", "GetSceneList", "Client asked to get the scene list")
+  # Create the request data
+
+  opCode6(obs = obs,
+          requestType = "GetMonitorList",
+          requestId = requestId,
+          verbose = verbose)
+
+  logThis(obs, requestId, "0", "GetMonitorList", "Client requested the monitor list")
 
   return(requestId)
 }

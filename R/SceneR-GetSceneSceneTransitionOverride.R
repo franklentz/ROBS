@@ -40,4 +40,6 @@ GetSceneSceneTransitionOverride <- function(obs = obs,
   logThis(obs, requestId, "0",
           "GetSceneSceneTransitionOverride",
           paste("Client requested the transition override parameters of", sceneName))
+
+  return(requestId)
 }

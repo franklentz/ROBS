@@ -1,8 +1,9 @@
-#' Gets the list of all groups
+#' Asks whether studio mode is enabled.
 #'
 #' @description
 #'
-#' Gets the list of all groups from OBS using an existing connection to OBS.
+#' Gets whether studio mode is enabled on OBS using an existing connection to OBS
+
 #'
 #' @param obs an obs websocket with an active connection. Default obs
 #' @param requestId The requestId used to provide feedback. Default UUIDgenerate()
@@ -17,23 +18,20 @@
 #' myobs <- createOBSWebsocket()
 #' connectToOBS(obs = myobs)
 #' identifyToOBS(obs = myobs, eventSub = "33", password = "OBSwebsocketServerPassword")
-#' GetGroupList(obs = myobs)
+#' GetStudioModeEnabled(obs = myobs)
 #' disconnectFromOBS(myobs)
-#' }
+#'}
 
-GetGroupList <- function(obs = obs,
-                        requestId = uuid::UUIDgenerate(),
-                        verbose = TRUE ){
+GetStudioModeEnabled <- function(obs = obs, requestId = uuid::UUIDgenerate(), verbose = TRUE ){
 
+  # Create the request data
 
   opCode6(obs = obs,
-          requestType = "GetGroupList",
+          requestType = "GetStudioModeEnabled",
           requestId = requestId,
           verbose = verbose)
 
-  logThis(obs, requestId, "0",
-          "GetGroupList",
-          paste("Client requested the list of all the groups"))
+  logThis(obs, requestId, "0", "GetStudioModeEnabled", "Client asked if the studio mode is enabled")
 
   return(requestId)
 }
