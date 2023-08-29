@@ -22,7 +22,7 @@ OpenInputInteractDialog(
 }
 \description{
 Open the input interact dialog box using an existing connection to OBS
-(Audio Capture, Video Capture ...)
+(Use with browser ...)
 }
 \examples{
 \dontrun{
