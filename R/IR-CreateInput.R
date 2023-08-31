@@ -66,7 +66,7 @@ CreateInput <- function(obs = obs,
 
 
   logThis(obs, requestId, "0", "CreateInput",
-          paste("Client asked to create a new input: ", inputName)
+          paste("Client asked to create a new input:", inputName)
   )
 
   return(requestId)
