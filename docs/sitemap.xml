@@ -148,10 +148,22 @@
     <loc>https://franklentz.github.io/onRobs/reference/SetCurrentSceneCollection.html</loc>
   </url>
   <url>
+    <loc>https://franklentz.github.io/onRobs/reference/SetInputAudioBalance.html</loc>
+  </url>
+  <url>
+    <loc>https://franklentz.github.io/onRobs/reference/SetInputAudioSyncOffset.html</loc>
+  </url>
+  <url>
+    <loc>https://franklentz.github.io/onRobs/reference/SetInputMute.html</loc>
+  </url>
+  <url>
     <loc>https://franklentz.github.io/onRobs/reference/SetInputName.html</loc>
   </url>
   <url>
     <loc>https://franklentz.github.io/onRobs/reference/SetInputSettings.html</loc>
+  </url>
+  <url>
+    <loc>https://franklentz.github.io/onRobs/reference/SetInputVolume.html</loc>
   </url>
   <url>
     <loc>https://franklentz.github.io/onRobs/reference/SetSceneName.html</loc>
