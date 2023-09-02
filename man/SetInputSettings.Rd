@@ -34,7 +34,7 @@ Sets the settings of an input in OBS using an existing connection to OBS.
 myobs <- createOBSWebsocket()
 connectToOBS(obs = myobs)
 identifyToOBS(obs = myobs, eventSub = "33", password = "OBSwebsocketServerPassword")
-SetInputSettings(obs = myobs, inputName = "New Browser", inputsSettings = "{"height":602,"width":802}")
+SetInputSettings(obs = myobs, inputName = "New Browser", inputsSettings = '{"height":602,"width":802}')
 disconnectFromOBS(myobs)
 }
 }

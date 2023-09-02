@@ -25,7 +25,7 @@
 #'}
 SetInputAudioSyncOffset <- function(obs = obs,
                                  inputName,
-                                 inputAudioSyncOffset = NULL,
+                                 inputAudioSyncOffset = 0,
                                  requestId = uuid::UUIDgenerate(),
                                  verbose = TRUE ){
 

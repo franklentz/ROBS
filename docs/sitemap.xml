@@ -76,6 +76,9 @@
     <loc>https://franklentz.github.io/onRobs/reference/GetInputMute.html</loc>
   </url>
   <url>
+    <loc>https://franklentz.github.io/onRobs/reference/GetInputPropertiesListPropertyItems.html</loc>
+  </url>
+  <url>
     <loc>https://franklentz.github.io/onRobs/reference/GetInputSettings.html</loc>
   </url>
   <url>
@@ -151,7 +154,13 @@
     <loc>https://franklentz.github.io/onRobs/reference/SetInputAudioBalance.html</loc>
   </url>
   <url>
+    <loc>https://franklentz.github.io/onRobs/reference/SetInputAudioMonitorType.html</loc>
+  </url>
+  <url>
     <loc>https://franklentz.github.io/onRobs/reference/SetInputAudioSyncOffset.html</loc>
+  </url>
+  <url>
+    <loc>https://franklentz.github.io/onRobs/reference/SetInputAudioTracks.html</loc>
   </url>
   <url>
     <loc>https://franklentz.github.io/onRobs/reference/SetInputMute.html</loc>

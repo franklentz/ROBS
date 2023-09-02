@@ -21,7 +21,7 @@
 #' myobs <- createOBSWebsocket()
 #' connectToOBS(obs = myobs)
 #' identifyToOBS(obs = myobs, eventSub = "33", password = "OBSwebsocketServerPassword")
-#' SetInputSettings(obs = myobs, inputName = "New Browser", inputsSettings = "{"height":602,"width":802}")
+#' SetInputSettings(obs = myobs, inputName = "New Browser", inputsSettings = '{"height":602,"width":802}')
 #' disconnectFromOBS(myobs)
 #'}
 SetInputSettings <- function(obs = obs,
