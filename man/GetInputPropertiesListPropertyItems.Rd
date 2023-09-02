@@ -25,14 +25,14 @@ GetInputPropertiesListPropertyItems(
 }
 \description{
 Gets the items of a list property for an input in OBS using an existing connection to OBS.
-For example get the list of available display for display capture
+For example get the list of available display for display capture from the monitor_id list.
 }
 \examples{
 \dontrun{
 myobs <- createOBSWebsocket()
 connectToOBS(obs = myobs)
 identifyToOBS(obs = myobs, eventSub = "33", password = "OBSwebsocketServerPassword")
-GetInputPropertiesListPropertyItems(obs = myobs, inputName = "Display Capture 1", propertyName = "displays")
+GetInputPropertiesListPropertyItems(obs = myobs, inputName = "Display Capture 1", propertyName = "monitor_id")
 disconnectFromOBS(myobs)
 }
 }
