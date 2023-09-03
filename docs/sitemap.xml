@@ -88,6 +88,9 @@
     <loc>https://franklentz.github.io/onRobs/reference/GetMonitorList.html</loc>
   </url>
   <url>
+    <loc>https://franklentz.github.io/onRobs/reference/GetRecordStatus.html</loc>
+  </url>
+  <url>
     <loc>https://franklentz.github.io/onRobs/reference/GetSceneCollectionList.html</loc>
   </url>
   <url>
@@ -101,6 +104,9 @@
   </url>
   <url>
     <loc>https://franklentz.github.io/onRobs/reference/GetSpecialInputs.html</loc>
+  </url>
+  <url>
+    <loc>https://franklentz.github.io/onRobs/reference/GetStreamStatus.html</loc>
   </url>
   <url>
     <loc>https://franklentz.github.io/onRobs/reference/GetStudioModeEnabled.html</loc>
@@ -133,13 +139,25 @@
     <loc>https://franklentz.github.io/onRobs/reference/parseById.html</loc>
   </url>
   <url>
+    <loc>https://franklentz.github.io/onRobs/reference/PauseRecord.html</loc>
+  </url>
+  <url>
+    <loc>https://franklentz.github.io/onRobs/reference/PressInputPropertiesButton.html</loc>
+  </url>
+  <url>
     <loc>https://franklentz.github.io/onRobs/reference/RemoveInput.html</loc>
   </url>
   <url>
     <loc>https://franklentz.github.io/onRobs/reference/RemoveScene.html</loc>
   </url>
   <url>
+    <loc>https://franklentz.github.io/onRobs/reference/ResumeRecord.html</loc>
+  </url>
+  <url>
     <loc>https://franklentz.github.io/onRobs/reference/ROBS-package.html</loc>
+  </url>
+  <url>
+    <loc>https://franklentz.github.io/onRobs/reference/SendStreamCaption.html</loc>
   </url>
   <url>
     <loc>https://franklentz.github.io/onRobs/reference/SetCurrentPreviewScene.html</loc>
@@ -184,7 +202,28 @@
     <loc>https://franklentz.github.io/onRobs/reference/SetStudioModeEnabled.html</loc>
   </url>
   <url>
+    <loc>https://franklentz.github.io/onRobs/reference/StartRecord.html</loc>
+  </url>
+  <url>
+    <loc>https://franklentz.github.io/onRobs/reference/StartStream.html</loc>
+  </url>
+  <url>
+    <loc>https://franklentz.github.io/onRobs/reference/StopRecord.html</loc>
+  </url>
+  <url>
+    <loc>https://franklentz.github.io/onRobs/reference/StopStream.html</loc>
+  </url>
+  <url>
     <loc>https://franklentz.github.io/onRobs/reference/ToggleInputMute.html</loc>
+  </url>
+  <url>
+    <loc>https://franklentz.github.io/onRobs/reference/ToggleRecord.html</loc>
+  </url>
+  <url>
+    <loc>https://franklentz.github.io/onRobs/reference/ToggleRecordPause.html</loc>
+  </url>
+  <url>
+    <loc>https://franklentz.github.io/onRobs/reference/ToggleStream.html</loc>
   </url>
   <url>
     <loc>https://franklentz.github.io/onRobs/reference/ViewLog.html</loc>
