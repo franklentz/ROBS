@@ -14,7 +14,7 @@ GetHotkeyList(obs = obs, requestId = uuid::UUIDgenerate(), verbose = TRUE)
 \item{verbose}{More messages and outputs if TRUE. Default: TRUE}
 }
 \description{
-Gets the version from OBS using an existing connection to OBS.
+Gets the hto key list from OBS using an existing connection to OBS.
 }
 \examples{
 \dontrun{
