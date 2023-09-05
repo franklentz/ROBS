@@ -31,6 +31,9 @@
     <loc>https://franklentz.github.io/onRobs/reference/CreateSceneCollection.html</loc>
   </url>
   <url>
+    <loc>https://franklentz.github.io/onRobs/reference/CreateSourceFilter.html</loc>
+  </url>
+  <url>
     <loc>https://franklentz.github.io/onRobs/reference/GetCurrentPreviewScene.html</loc>
   </url>
   <url>
@@ -100,6 +103,12 @@
     <loc>https://franklentz.github.io/onRobs/reference/GetSceneSceneTransitionOverride.html</loc>
   </url>
   <url>
+    <loc>https://franklentz.github.io/onRobs/reference/GetSourceFilterDefaultSettings.html</loc>
+  </url>
+  <url>
+    <loc>https://franklentz.github.io/onRobs/reference/GetSourceFilterList.html</loc>
+  </url>
+  <url>
     <loc>https://franklentz.github.io/onRobs/reference/GetSpecialInputs.html</loc>
   </url>
   <url>
@@ -143,6 +152,9 @@
   </url>
   <url>
     <loc>https://franklentz.github.io/onRobs/reference/RemoveScene.html</loc>
+  </url>
+  <url>
+    <loc>https://franklentz.github.io/onRobs/reference/RemoveSourceFilter.html</loc>
   </url>
   <url>
     <loc>https://franklentz.github.io/onRobs/reference/ResumeRecord.html</loc>
